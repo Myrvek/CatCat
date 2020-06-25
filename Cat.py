@@ -341,4 +341,7 @@ async def num_msg(ctx, member: discord.Member = None):
     number = await Messages(Bot).number_messages(user)
     embed = discord.Embed(description = f":envelope: Количество сообщений на сервере от **{user.name}** — **{number}**!", color= 0x39d0d6)
     await ctx.send(embed = embed)
-Bot.run('NzE3NzE0Mjc1MTQ1MjIwMTg4.XteVqQ.TjsA8zEdBhPx5mDOrIpa_72vjl4')
+    
+token = os.environ.get('BOT_TOKEN')
+
+Bot.run(str(token))
